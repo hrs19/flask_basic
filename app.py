@@ -19,9 +19,9 @@ def predict():
     '''
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
-    print(final_features)
+    #print(final_features)
     prediction = model.predict(final_features)
-    print(prediction)
+    #print(prediction)
     #output = round(prediction[0], 2)
     if prediction==0:
         output="Setosa"
@@ -30,8 +30,7 @@ def predict():
     elif prediction==2:
         output="Virginica"
     
-
-    return render_template('index.html', prediction_text=f'The species is Iris:{output}')#.format(output))
+    return render_template('index.html', prediction_text=f'The species is Iris:{output}',data=prediction)#.format(output))
 
 
 

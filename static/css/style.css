@@ -30,6 +30,14 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
 
 }
+
+.default_img{
+    position: absolute;
+	top: 40%;
+	left: 10%;
+	margin: 0 0 0 -300px;
+
+}
 .login { 
 	position: absolute;
 	top: 40%;

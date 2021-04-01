@@ -19,8 +19,11 @@
   </head>
   
 <body>
+    <div class="default_img">
+    <img src='static\refer.jpg'height="200" width="200">
+    </div>
     <div class="login">
-
+        
         <h1>Predict Iris Species</h1>
         <form action="{{ url_for('predict')}}"method="post">
             <input type="text" name="sepal-length" placeholder="Sepal Length" required="required" />
@@ -32,6 +35,16 @@
         </form>
         <br>
         {{ prediction_text }}
+        <br>
+
+        {%if data == 0%}
+        <img src='static\setosa.jpg'height="200" width="200">  
+        {%elif data ==1%}
+        <img src='static\versi.jpg' height="200" width="200">
+        {%elif data==2%}
+        <img src='static\virginica.jpg'height="200" width="200">        
+        {%endif%}
+    
 
     </div>
 </body>
